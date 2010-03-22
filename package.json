@@ -1,0 +1,8 @@
+{
+    "name": "thatsallfolks",
+    "description": "A pure-JavaScript template parser and formatter build on Narwhal's package resource overlays.",
+    "keywords": ["template", "parser", "formatter"],
+    "dependencies": [
+        "narwhal-lib"
+    ]
+}

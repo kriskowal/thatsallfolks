@@ -1,0 +1,14 @@
+{{ extends "thatsallfolks/base.html" }}
+{% block body %}
+    <hi>{{hi}}</hi>
+    {% if hi %}
+    <p>true</p>
+    {% end %}
+    {% if children %}
+    <ul>
+    {% for children %}
+        <li>{{bye}}</li>
+    {% end for %}
+    </ul>
+    {% end if %}
+{% end block %}
