@@ -1,5 +1,7 @@
 {{ extends "thatsallfolks/base.html" }}
+{% block title %}<title>Hello, World!</title>{% end %}
 {% block body %}
+    {{ block.super }}
     <hi>{{hi}}</hi>
     {% if hi %}
     <p>true</p>

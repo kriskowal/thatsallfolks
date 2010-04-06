@@ -1,0 +1,22 @@
+{{ extends "thatsallfolks/style.html" }}
+{% block body %}
+<div id="container">{% block container %}
+    <div id="header">
+        {% block header %}{% end %}
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            {% block content %}{% end %}
+        </div>
+    </div>
+    <div id="navigation">
+        {% block navigation %}{% end %}
+    </div>
+    <div id="extra">
+        {% block extra %}{% end %}
+    </div>
+    <div id="footer">
+        {% block footer %}{% end %}
+    </div>
+{% end container %}</div>
+{% end %}
