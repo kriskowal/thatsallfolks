@@ -11,5 +11,5 @@ exports.test = function (ASSERT) {
 };
 
 if (module === require.main)
-    require("os").exit(require("test").run(exports));
+    require("narwhal/os").exit(require("test").run(exports));
 

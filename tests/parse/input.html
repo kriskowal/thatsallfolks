@@ -1,0 +1,15 @@
+prefix {{inline}} postfix
+begin 1
+{% 1 %}
+    begin 1.1
+    {% 1.1 %}
+        content 1.1.1
+    {% end %}
+    end 1.1
+    begin 1.2
+    {% 1.2 argument %}
+        content 1.2.1
+    {% end 1.2 %}
+    end 1.2
+{% end %}
+end 1

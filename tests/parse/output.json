@@ -1,0 +1,46 @@
+{
+    "type": "block",
+    "content": "root",
+    "lineNo": 1,
+    "columnNo": 0,
+    "children": [
+        "prefix ",
+        {
+            "type": "inline",
+            "content": "inline",
+            "lineNo": 1,
+            "columnNo": 0
+        },
+        " postfix\nbegin 1\n",
+        {
+            "type": "block",
+            "content": "1",
+            "lineNo": 3,
+            "columnNo": 0,
+            "children": [
+                "\n    begin 1.1\n    ",
+                {
+                    "type": "block",
+                    "content": "1.1",
+                    "lineNo": 5,
+                    "columnNo": 4,
+                    "children": [
+                        "\n        content 1.1.1\n    "
+                    ]
+                },
+                "\n    end 1.1\n    begin 1.2\n    ",
+                {
+                    "type": "block",
+                    "content": "1.2 argument",
+                    "lineNo": 10,
+                    "columnNo": 4,
+                    "children": [
+                        "\n        content 1.2.1\n    "
+                    ]
+                },
+                "\n    end 1.2\n"
+            ]
+        },
+        "\nend 1\n"
+    ]
+}
