@@ -1,4 +1,5 @@
 
+var ASSERT = require("assert");
 var Context = require("thatsallfolks/context").Context;
 
 exports.test = function (ASSERT) {
@@ -6,8 +7,43 @@ exports.test = function (ASSERT) {
     var context = Context(parent);
     parent.set(["a", "b"], 10);
     context.set(["a"], 20);
-    ASSERT.equal(10, context.get(["a", "b"]));
-    ASSERT.equal(20, context.get(["a"]));
+    ASSERT.equal(context.get(["a", "b"]), 10);
+    ASSERT.equal(context.get(["a"]), 20);
+};
+
+exports.testSelf = function () {
+    var context = Context(10);
+    ASSERT.equal(context.get(["."]), 10);
+};
+
+exports.testChildSelfGet = function () {
+    var context = Context({});
+    context.set(["a"], 10);
+    ASSERT.equal(context.get(["a", "."]), 10);
+    ASSERT.equal(context.get([".", "a"]), 10);
+};
+
+exports.testChildSelfHas = function () {
+    var context = Context({});
+    ASSERT.equal(context.has(["."]), true);
+};
+
+exports.testChildSelfHasOwn = function () {
+    var context = Context({});
+    ASSERT.equal(context.hasOwn(["."]), true);
+};
+
+
+exports.testChildSelfSet1 = function () {
+    var context = Context({});
+    context.set(["a", "."], 10);
+    ASSERT.equal(context.get(["a"]), 10);
+};
+
+exports.testChildSelfSet2 = function () {
+    var context = Context({});
+    context.set([".", "a"], 10);
+    ASSERT.equal(context.get(["a"]), 10);
 };
 
 if (module === require.main)
