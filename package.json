@@ -3,7 +3,16 @@
     "description": "A pure-JavaScript template parser and formatter build on Narwhal's package resource overlays.",
     "version": "0.0.0",
     "keywords": ["template", "parser", "formatter"],
-    "dependencies": [
-        "narwhal-lib"
-    ]
+    "dependencies": {
+        "narwhal-lib": "0.0.2",
+        "markdown": "0.0.0"
+    },
+    "overlay": {
+        "npm": {
+            "dependencies": {
+                "narwhal-lib": ">=0.0.2",
+                "markdown": ">=0.0.0"
+            }
+        }
+    }
 }
