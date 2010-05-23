@@ -11,6 +11,22 @@ exports.test = function (ASSERT) {
     ASSERT.equal(context.get(["a"]), 20);
 };
 
+exports.testObjectObject = function () {
+    var context = Context({
+        "a": 10
+    }, {
+        "b": 20
+    });
+    ASSERT.equal(context.get(["a"]), 10);
+    ASSERT.equal(context.get(["b"]), 20);
+};
+
+exports.testContextContext = function () {
+    ASSERT['throws'](function () {
+        Context(Context(), Context());
+    });
+};
+
 exports.testSelf = function () {
     var context = Context(10);
     ASSERT.equal(context.get(["."]), 10);

@@ -2,7 +2,9 @@
 {% block body %}
 <div id="container">{% block container %}
     <div id="header">
-        {% block header %}{% end %}
+        {% block header %}
+            <h1>{% block title %}{% end block %}</h1>
+        {% end %}
     </div>
     <div id="wrapper">
         <div id="content">

@@ -11,8 +11,9 @@ exports.test = function () {
         "children": [1, 2, 3],
         "bye": "Bye!"
     });
+    here.resolve("actual.html").write(actual, {"charset": "UTF-8"});
     var expected = here.resolve("output.html").read({"charset": "UTF-8"});
-    ASSERT.equal(expected, actual);
+    ASSERT.equal(actual, expected);
 };
 
 if (module === require.main)

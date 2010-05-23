@@ -1,5 +1,5 @@
 {{ extends "thatsallfolks/base.html" }}
-{% block title %}<title>Hello, World!</title>{% end %}
+{% block title %}Hello, World!{% end %}
 {% block body %}
     {{ block.super }}
     <h1>{{hi}}</h1>
@@ -8,7 +8,7 @@
     {% end %}
     {% if children %}
     <ul>
-    {% for children %}
+    {% for child in children %}
         <li>{{bye}}</li>
     {% end for %}
     </ul>

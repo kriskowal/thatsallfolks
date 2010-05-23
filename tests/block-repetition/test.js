@@ -5,19 +5,10 @@ exports.test = function () {
     var TAF = require("thatsallfolks/load");
     var FS = require("narwhal/fs");
     var here = FS.path(module.path);
-    var html = here.resolve("input.html").canonical();
-    var actual = TAF.load(html).format({
-        "foo": {
-            "bar": 10
-        },
-        "fooz": [
-            {"foo": 20},
-            {"foo": 30}
-        ]
-    });
-    here.resolve("actual.html").write(actual, {"charset": "UTF-8"});
+    var html = here.resolve("child.html").canonical();
+    var actual = TAF.load(html).format();
     var expected = here.resolve("output.html").read({"charset": "UTF-8"});
-    ASSERT.equal(expected, actual);
+    ASSERT.equal(actual, expected);
 };
 
 if (module === require.main)
