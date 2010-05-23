@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "keywords": ["template", "parser", "formatter"],
     "dependencies": {
-        "narwhal-lib": "0.0.2",
+        "narwhal-lib": "0.0.3",
         "markdown": "0.0.0"
     },
     "directories": {
